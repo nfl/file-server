@@ -19,12 +19,12 @@
     "spdy-push": "^1.0.0"
   },
   "devDependencies": {
-    "bluebird": "2",
-    "co": "3",
+    "bluebird": "3.1.1",
+    "co": "4.6.0",
     "istanbul-harmony": "0",
     "koa": "*",
     "mocha": "^2.2.5",
-    "should": "3",
+    "should": "8.0.2",
     "spdy": "*",
     "spdy-keys": "*",
     "supertest": "^1.0.1"
