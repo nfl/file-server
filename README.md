@@ -41,6 +41,7 @@ Options are:
   - `encoding` <base64> - encoding to use
 - `index` - serve `index.html` files
 - `hidden` <false> - show hidden files which leading `.`s
+ - `gzip` Try to serve the gzipped version of a file automatically when `gzip` is supported by a client and if the requested file with `.gz` extension exists. defaults to true.
 
 ### var file = yield* send(this, [path])
 

@@ -38,6 +38,9 @@ module.exports = function (root, options) {
   var encoding = etagoptions.encoding || 'base64'
   var index = options.index
   var hidden = options.hidden
+  var gzip = options.gzip
+
+  if (typeof gzip === 'undefined') gzip = true
 
   // this.fileServer.send(), etc.
   function FileServer(context) {
@@ -199,7 +202,7 @@ module.exports = function (root, options) {
       type: mime.contentType(extname(path)) || 'application/octet-stream',
     }
 
-    if (!compressible(file.type)) return file
+    if (!gzip || !compressible(file.type)) return file
 
     // if we can compress this file, we create a .gz
     var compress = file.compress = {
